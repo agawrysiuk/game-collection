@@ -5,10 +5,12 @@ import { AppComponent } from './components/app.component';
 import {FormsModule} from '@angular/forms';
 
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { GameSearchComponent } from './components/game-search/game-search.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    GameSearchComponent
   ],
   imports: [
     BrowserModule,
