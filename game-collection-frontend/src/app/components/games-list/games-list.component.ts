@@ -1,12 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-games-list',
+  templateUrl: './games-list.component.html',
+  styleUrls: ['./games-list.component.css']
 })
-export class AppComponent {
-  title = 'game-collection-frontend';
+export class GamesListComponent implements OnInit {
   searchText: string;
   games = [
     { name: 'Stronghold', released: '2002' },
@@ -14,5 +13,11 @@ export class AppComponent {
     { name: 'Borderlands', released: '2009' },
     { name: 'The Witcher 3: Wild Hunt', released: '2015' },
     { name: 'Fallout', released: '1997' },
-    ];
+  ];
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
 }
