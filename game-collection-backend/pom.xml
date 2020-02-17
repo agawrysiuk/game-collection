@@ -12,7 +12,7 @@
 	<artifactId>game-collection-backend</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>game-collection-backend</name>
-	<description>Demo project for Spring Boot</description>
+	<description>Game collection project for Spring Boot</description>
 
 	<properties>
 		<java.version>11</java.version>

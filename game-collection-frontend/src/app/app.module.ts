@@ -7,6 +7,7 @@ import {FormsModule} from '@angular/forms';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { GameSearchComponent } from './components/game-search/game-search.component';
 import { GamesListComponent } from './components/games-list/games-list.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { GamesListComponent } from './components/games-list/games-list.component
   imports: [
     BrowserModule,
     FormsModule,
-    Ng2SearchPipeModule
+    Ng2SearchPipeModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
