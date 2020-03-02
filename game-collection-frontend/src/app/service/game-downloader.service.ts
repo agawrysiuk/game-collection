@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import {Game} from "../dto/game";
 import {Observable} from "rxjs";
+import {GameCollection} from "../dto/game-collection";
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +16,7 @@ export class GameDownloaderService {
     this.allGamesUrl = 'https://api.rawg.io/api/games';
   }
 
-  public getAllGames(): Observable<Game[]> {
-    return this.http.get<Game[]>(this.allGamesUrl);
+  public getAllGames(): Observable<GameCollection[]> {
+    return this.http.get<GameCollection[]>(this.allGamesUrl);
   }
 }
