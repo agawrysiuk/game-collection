@@ -9,6 +9,7 @@ import {Observable} from "rxjs";
 export class GameDownloaderService {
 
   private readonly allGamesUrl;
+  private
 
   constructor(private http: HttpClient) {
     this.allGamesUrl = 'https://api.rawg.io/api/games';
