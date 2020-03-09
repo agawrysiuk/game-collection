@@ -1,1 +1,26 @@
-<p>game-search works!</p>
+<div class="container">
+  <h1 class="h1 text-center">Search for a game</h1>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="search-game">
+      <input #searchInput class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off"
+             placeholder="Download game list">
+      <button class="btn-primary" (click)="searchForGames(searchInput.value)">Search</button>
+    </div>
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th>Title</th>
+        <th>Released</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let game of games | async">
+        <td>{{game.name}}</td>
+        <td>{{game.released}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

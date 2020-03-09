@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Observable} from "rxjs";
+import {Game} from "../../dto/game";
 
 @Component({
   selector: 'app-game-search',
@@ -6,10 +8,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./game-search.component.css']
 })
 export class GameSearchComponent implements OnInit {
+  searchText: string;
+  games: Observable<Game[]>;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+
+  searchForGames(value: string) {
+
+  }
 }
