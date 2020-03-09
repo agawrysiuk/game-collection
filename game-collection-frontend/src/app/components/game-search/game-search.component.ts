@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Observable} from "rxjs";
 import {Game} from "../../dto/game";
+import {GameDownloaderService} from "../../service/game-downloader.service";
 
 @Component({
   selector: 'app-game-search',
@@ -9,15 +10,15 @@ import {Game} from "../../dto/game";
 })
 export class GameSearchComponent implements OnInit {
   searchText: string;
-  games: Observable<Game[]>;
+  games: Game[];
 
-  constructor() { }
+  constructor(private gameDownloaderService: GameDownloaderService) { }
 
   ngOnInit(): void {
   }
 
 
   searchForGames(value: string) {
-
+    this.games = this.gameDownloaderService.getGamesFromString(value);
   }
 }

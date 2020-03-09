@@ -8,6 +8,7 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { GameSearchComponent } from './components/game-search/game-search.component';
 import { GamesListComponent } from './components/games-list/games-list.component';
 import { AppRoutingModule } from './app-routing.module';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { AppRoutingModule } from './app-routing.module';
     BrowserModule,
     FormsModule,
     Ng2SearchPipeModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
