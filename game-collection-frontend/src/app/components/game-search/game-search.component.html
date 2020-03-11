@@ -9,10 +9,12 @@
                  placeholder="Download game list">
         </div>
         <div class="search-game-button">
-          <button type="submit" class="search-button" (click)="searchForGames(searchText.value)" [disabled]="!searchText.valid">Search</button>
+          <button type="submit" class="search-button" (click)="searchForGames()" [disabled]="!searchText.valid">Search</button>
         </div>
         <div class="search-game-list">
-          <select class="custom-select"> </select>
+          <select class="search-select" [formControl]="select">
+            <option *ngFor="let option of selectOptions; let i = index" value="{{option}}" [selected]="option === 'PC'">{{option}}</option>
+          </select>
         </div>
     </div>
     <table class="table table-striped">

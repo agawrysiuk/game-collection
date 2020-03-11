@@ -20,7 +20,7 @@ export class GameDownloaderService {
     return this.http.get<GameCollection[]>(this.allGamesUrl);
   }
 
-  public getGamesFromString(gameName: string): Observable<GameCollection> {
-    return this.http.get<GameCollection>(this.searchGameUrl + gameName);
+  public getGamesFromString(gameName: string, platform: number): Observable<GameCollection> {
+    return this.http.get<GameCollection>(this.searchGameUrl + gameName + '&platforms=' + platform);
   }
 }

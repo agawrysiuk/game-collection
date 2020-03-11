@@ -15,7 +15,7 @@ import {Platforms} from "../../dto/platforms";
 export class GameSearchComponent implements OnInit {
   games: Game[];
   searchText = new FormControl('', Validators.required);
-  select = new FormControl('');
+  select = new FormControl('PC');
   selectOptions = [];
   platformMap = new Map();
 
@@ -24,7 +24,7 @@ export class GameSearchComponent implements OnInit {
     this.platformsService.getAllPlatforms().subscribe(result => {
       console.log(result.results);
       result.results.forEach(platform => {
-        this.platformMap.set(platform.id, platform.name);
+        this.platformMap.set(platform.name, platform.id);
         this.selectOptions.push(platform.name);
       });
     });
@@ -34,10 +34,10 @@ export class GameSearchComponent implements OnInit {
   }
 
 
-  searchForGames(value: string) {
-    this.gameDownloaderService.getGamesFromString(value).subscribe((result: GameCollection) => {
+  searchForGames() {
+    const platformNumber = this.platformMap.get(this.select.value);
+    this.gameDownloaderService.getGamesFromString(this.searchText.value, platformNumber).subscribe((result: GameCollection) => {
       this.games = result.results;
-      console.log(this.games);
       return this.games;
     });
   }

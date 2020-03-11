@@ -1,7 +1,6 @@
 .search-game {
   display: inline-flex;
   flex-direction: row;
-  max-width: 500px;
   padding-bottom: 50px;
   margin:auto;
 }
@@ -19,7 +18,7 @@
 
 .search-game-button {
   order: 2;
-  padding: 0 8px 0 8px;
+  padding: 0 24px 0 8px;
   vertical-align: baseline;
 }
 
@@ -45,4 +44,15 @@
 .search-button:disabled {
   cursor: default;
   background: #5F9BE0;
+}
+
+.search-game-list {
+  order: 3;
+  padding: 0 8px 0 8px;
+}
+
+.search-select {
+  cursor: pointer;
+  height: 38px;
+  width: 100px;
 }
