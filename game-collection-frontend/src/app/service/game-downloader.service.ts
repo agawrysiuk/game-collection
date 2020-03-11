@@ -21,10 +21,7 @@ export class GameDownloaderService {
     return this.http.get<GameCollection[]>(this.allGamesUrl);
   }
 
-  public getGamesFromString(gameName: string): Game[] {
-    let games: Game[];
-    let collection = this.http.get<GameCollection[]>(this.searchGameUrl + gameName);
-    console.log(collection)
-    return games;
+  public getGamesFromString(gameName: string): Observable<GameCollection> {
+    return this.http.get<GameCollection>(this.searchGameUrl + gameName);
   }
 }

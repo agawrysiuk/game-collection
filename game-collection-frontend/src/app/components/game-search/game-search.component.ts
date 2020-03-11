@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Observable} from "rxjs";
 import {Game} from "../../dto/game";
 import {GameDownloaderService} from "../../service/game-downloader.service";
+import {GameCollection} from "../../dto/game-collection";
 
 @Component({
   selector: 'app-game-search',
@@ -19,6 +20,10 @@ export class GameSearchComponent implements OnInit {
 
 
   searchForGames(value: string) {
-    this.games = this.gameDownloaderService.getGamesFromString(value);
+    this.gameDownloaderService.getGamesFromString(value).subscribe((result: GameCollection) => {
+      this.games = result.results;
+      console.log(this.games);
+      return this.games;
+    });
   }
 }
