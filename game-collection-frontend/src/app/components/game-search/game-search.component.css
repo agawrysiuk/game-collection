@@ -13,13 +13,13 @@
 
 .search-game-input {
   order: 1;
-  padding: 0 8px;
+  padding: 0 24px 0 0;
   vertical-align: baseline;
 }
 
 .search-game-button {
   order: 2;
-  padding: 0 8px 0 24px;
+  padding: 0 8px 0 8px;
   vertical-align: baseline;
 }
 

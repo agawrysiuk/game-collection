@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import {RouterModule, Routes} from '@angular/router';
 import {GamesListComponent} from './components/games-list/games-list.component';
 import {GameSearchComponent} from './components/game-search/game-search.component';

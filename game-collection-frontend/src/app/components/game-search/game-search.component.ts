@@ -2,7 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import {Game} from "../../dto/game";
 import {GameDownloaderService} from "../../service/game-downloader.service";
 import {GameCollection} from "../../dto/game-collection";
-import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
+import {FormControl, Validators} from "@angular/forms";
+import {GamePlatformsService} from "../../service/game-platforms.service";
+import {Platforms} from "../../dto/platforms";
+
 
 @Component({
   selector: 'app-game-search',
@@ -12,8 +15,21 @@ import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
 export class GameSearchComponent implements OnInit {
   games: Game[];
   searchText = new FormControl('', Validators.required);
+  select = new FormControl('');
+  selectOptions = [];
+  platformMap = new Map();
 
-  constructor(private gameDownloaderService: GameDownloaderService) { }
+  constructor(private gameDownloaderService: GameDownloaderService,
+              private platformsService: GamePlatformsService) {
+    this.platformsService.getAllPlatforms().subscribe(result => {
+      console.log(result.results);
+      result.results.forEach(platform => {
+        this.platformMap.set(platform.id, platform.name);
+        this.selectOptions.push(platform.name);
+      });
+    });
+  }
+
   ngOnInit(): void {
   }
 

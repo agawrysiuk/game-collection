@@ -11,6 +11,9 @@
         <div class="search-game-button">
           <button type="submit" class="search-button" (click)="searchForGames(searchText.value)" [disabled]="!searchText.valid">Search</button>
         </div>
+        <div class="search-game-list">
+          <select class="custom-select"> </select>
+        </div>
     </div>
     <table class="table table-striped">
       <thead>

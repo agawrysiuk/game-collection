@@ -13,7 +13,7 @@ export class GameDownloaderService {
 
   constructor(private http: HttpClient) {
     this.allGamesUrl = 'https://api.rawg.io/api/games';
-    this.searchGameUrl = 'https://api.rawg.io/api/games?search=';
+    this.searchGameUrl = 'https://api.rawg.io/api/games?page_size=1000&search=';
   }
 
   public getAllGames(): Observable<GameCollection[]> {
