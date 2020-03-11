@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {Observable} from "rxjs";
 import {Game} from "../../dto/game";
 import {GameDownloaderService} from "../../service/game-downloader.service";
 import {GameCollection} from "../../dto/game-collection";
+import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
 
 @Component({
   selector: 'app-game-search',
@@ -10,11 +10,10 @@ import {GameCollection} from "../../dto/game-collection";
   styleUrls: ['./game-search.component.css']
 })
 export class GameSearchComponent implements OnInit {
-  searchText: string;
   games: Game[];
+  searchText = new FormControl('', Validators.required);
 
   constructor(private gameDownloaderService: GameDownloaderService) { }
-
   ngOnInit(): void {
   }
 

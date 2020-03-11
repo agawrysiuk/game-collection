@@ -1,4 +1,6 @@
 .search-game {
+  display: inline-flex;
+  flex-direction: row;
   max-width: 500px;
   padding-bottom: 50px;
   margin:auto;
@@ -7,4 +9,40 @@
 .form-control {
   box-shadow: 0 10px 40px 0 #B0C1D9;
   width: 400px;
+}
+
+.search-game-input {
+  order: 1;
+  padding: 0 8px;
+  vertical-align: baseline;
+}
+
+.search-game-button {
+  order: 2;
+  padding: 0 8px 0 24px;
+  vertical-align: baseline;
+}
+
+.search-button {
+  cursor: pointer;
+  height: 38px;
+  width: 100px;
+  background: #1c8adb;
+  border-radius: 100px;
+  border: none;
+  color: #fff;
+  text-decoration: none;
+}
+
+.search-button:hover {
+  background: #5F9BE0;
+}
+
+.search-button:active {
+  background: #17548e;
+}
+
+.search-button:disabled {
+  cursor: default;
+  background: #5F9BE0;
 }
