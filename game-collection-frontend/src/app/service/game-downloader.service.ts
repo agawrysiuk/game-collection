@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import {Game} from "../dto/game";
 import {Observable} from "rxjs";
 import {GameCollection} from "../dto/game-collection";
 
