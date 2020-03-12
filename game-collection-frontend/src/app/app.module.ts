@@ -8,7 +8,7 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { GameSearchComponent } from './components/game-search/game-search.component';
 import { GamesListComponent } from './components/games-list/games-list.component';
 import { AppRoutingModule } from './app-routing.module';
-import {HttpClientModule} from "@angular/common/http";
+import {HttpClientModule} from '@angular/common/http';
 import {InitService} from "./service/init.service";
 
 export function initData(initService: InitService) {

@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Game} from "../../dto/game";
+import {Game, GameCollection} from "../../dto/game";
 import {GameDownloaderService} from "../../service/game-downloader.service";
-import {GameCollection} from "../../dto/game-collection";
 import {FormControl, Validators} from "@angular/forms";
 import {InitService} from "../../service/init.service";
 
