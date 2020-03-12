@@ -43,7 +43,9 @@
 
 .search-button:disabled {
   cursor: default;
-  background: #5F9BE0;
+  background: none;
+  border: 1px solid #cccccc;
+  color: #cccccc;
 }
 
 .search-game-list {
@@ -54,5 +56,10 @@
 .search-select {
   cursor: pointer;
   height: 38px;
-  width: 100px;
+  width: 200px;
+  border: 2px solid #17548e;
+  color: #17548e;
+  appearance: none;
+  padding-left: 8px;
+  background: url(/assets/images/dropdown.png) no-repeat 90%;
 }
