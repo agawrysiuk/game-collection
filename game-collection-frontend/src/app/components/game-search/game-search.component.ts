@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 import {Game, GameCollection} from "../../dto/game";
 import {GameDownloaderService} from "../../service/game-downloader.service";
 import {FormControl, Validators} from "@angular/forms";
@@ -8,6 +8,7 @@ import {InitService} from "../../service/init.service";
 @Component({
   selector: 'app-game-search',
   templateUrl: './game-search.component.html',
+  encapsulation: ViewEncapsulation.None,
   styleUrls: ['./game-search.component.css']
 })
 export class GameSearchComponent implements OnInit {

@@ -10,6 +10,7 @@ import { GamesListComponent } from './components/games-list/games-list.component
 import { AppRoutingModule } from './app-routing.module';
 import {HttpClientModule} from '@angular/common/http';
 import {InitService} from "./service/init.service";
+import {NgbTooltipModule} from "@ng-bootstrap/ng-bootstrap";
 
 export function initData(initService: InitService) {
   return () => initService.init();
@@ -27,7 +28,8 @@ export function initData(initService: InitService) {
     Ng2SearchPipeModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgbTooltipModule
   ],
   providers: [
     { provide: APP_INITIALIZER,

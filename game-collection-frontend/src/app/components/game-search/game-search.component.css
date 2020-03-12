@@ -64,8 +64,27 @@
   background: url(/assets/images/dropdown.png) no-repeat 90%;
 }
 
-img.search-game-image {
+.search-game-image {
   width: auto;
   height: 24px;
   position: relative;
+}
+
+.search-game-image-big {
+  width: 600px;
+  height: auto;
+  border: 2px solid #17548e;
+}
+
+.image-tooltip-class {
+  opacity: 1 !important;
+  pointer-events: none;
+}
+
+.image-tooltip-class .tooltip-inner {
+  background-color: transparent;
+}
+
+.image-tooltip-class .arrow::before {
+  display: none;
 }
