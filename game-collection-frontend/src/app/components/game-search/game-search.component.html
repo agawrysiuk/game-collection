@@ -4,29 +4,33 @@
 <div class="container">
   <div class="row">
     <div class="search-game">
-        <div class="search-game-input">
-          <input [formControl]="searchText" class="form-control" type="text" name="search" autocomplete="off"
-                 placeholder="Download game list">
-        </div>
-        <div class="search-game-button">
-          <button type="submit" class="search-button" (click)="searchForGames()" [disabled]="!searchText.valid">Search</button>
-        </div>
-        <div class="search-game-list">
-          <select class="search-select" [formControl]="select">
-            <option *ngFor="let option of selectOptions" value="{{option}}">{{option}}</option>
-          </select>
-        </div>
+      <div class="search-game-input">
+        <input [formControl]="searchText" class="form-control" type="text" name="search" autocomplete="off"
+               placeholder="Download game list">
+      </div>
+      <div class="search-game-button">
+        <button type="submit" class="search-button" (click)="searchForGames()" [disabled]="!searchText.valid">Search
+        </button>
+      </div>
+      <div class="search-game-list">
+        <select class="search-select" [formControl]="select">
+          <option *ngFor="let option of selectOptions" value="{{option}}">{{option}}</option>
+        </select>
+      </div>
     </div>
     <table class="table table-striped">
       <thead>
       <tr>
         <th>Title</th>
+        <th>Image</th>
         <th>Released</th>
       </tr>
       </thead>
       <tbody>
       <tr *ngFor="let game of games">
         <td>{{game.name}}</td>
+        <td><img class="search-game-image" src="{{game.background_image}}" alt="">
+        </td>
         <td>{{game.released}}</td>
       </tr>
       </tbody>

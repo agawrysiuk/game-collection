@@ -1,3 +1,13 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  overflow-x: hidden;
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
 .container {
   padding-top: 50px;
   padding-bottom: 10px;

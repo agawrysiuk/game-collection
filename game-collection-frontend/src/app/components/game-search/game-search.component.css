@@ -63,3 +63,9 @@
   padding-left: 8px;
   background: url(/assets/images/dropdown.png) no-repeat 90%;
 }
+
+img.search-game-image {
+  width: auto;
+  height: 24px;
+  position: relative;
+}
