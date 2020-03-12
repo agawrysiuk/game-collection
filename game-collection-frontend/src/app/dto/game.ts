@@ -26,5 +26,4 @@ export class ScreenShot {
 export class Genres {
   id: number;
   name: string;
-  slug: string;
 }
