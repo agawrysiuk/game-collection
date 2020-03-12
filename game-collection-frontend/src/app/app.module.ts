@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {APP_INITIALIZER, NgModule} from '@angular/core';
 
 import { AppComponent } from './app.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
@@ -9,6 +9,11 @@ import { GameSearchComponent } from './components/game-search/game-search.compon
 import { GamesListComponent } from './components/games-list/games-list.component';
 import { AppRoutingModule } from './app-routing.module';
 import {HttpClientModule} from "@angular/common/http";
+import {InitService} from "./service/init.service";
+
+export function initData(initService: InitService) {
+  return () => initService.init();
+}
 
 @NgModule({
   declarations: [
@@ -24,7 +29,12 @@ import {HttpClientModule} from "@angular/common/http";
     HttpClientModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    { provide: APP_INITIALIZER,
+    useFactory: initData,
+    deps: [InitService],
+    multi: true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
