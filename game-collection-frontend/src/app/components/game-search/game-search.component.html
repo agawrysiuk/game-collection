@@ -24,6 +24,7 @@
         <th>Title</th>
         <th>Image</th>
         <th>Released</th>
+        <th>Add?</th>
       </tr>
       </thead>
       <tbody>
@@ -32,6 +33,7 @@
         <td><img class="search-game-image" src="{{game.background_image}}" alt="" [ngbTooltip]="tooltipImage" tooltipClass="image-tooltip-class"></td>
         <ng-template #tooltipImage><img class="search-game-image-big" src="{{game.background_image}}" alt=""></ng-template>
         <td>{{game.released}}</td>
+        <td><button class="search-button" (click)="addGame(game)">Add</button></td>
       </tr>
       </tbody>
     </table>

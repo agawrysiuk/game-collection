@@ -7,6 +7,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
@@ -16,7 +17,7 @@ public class GameController {
     private final GameServiceRead serviceRead;
 
     @PostMapping("/save")
-    public ResponseEntity<String> saveBook(@RequestParam Game game) {
+    public ResponseEntity<String> saveBook(@RequestBody Game game) {
         return serviceWrite.saveGame(game);
     }
 }

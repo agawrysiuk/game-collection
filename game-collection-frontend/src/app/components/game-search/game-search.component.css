@@ -22,10 +22,15 @@
   vertical-align: baseline;
 }
 
+.search-game-button > .search-button {
+  width: 80px;
+}
+
 .search-button {
   cursor: pointer;
   height: 38px;
-  width: 100px;
+  padding-left: 10px;
+  padding-right: 10px;
   background: #1c8adb;
   border-radius: 100px;
   border: none;

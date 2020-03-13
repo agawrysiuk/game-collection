@@ -3,6 +3,7 @@ import {Game, GameCollection} from "../../dto/game";
 import {GameDownloaderService} from "../../service/game-downloader.service";
 import {FormControl, Validators} from "@angular/forms";
 import {InitService} from "../../service/init.service";
+import {GameDatabaseService} from "../../service/game-database.service";
 
 
 @Component({
@@ -19,6 +20,7 @@ export class GameSearchComponent implements OnInit {
   platformMap;
 
   constructor(private gameDownloaderService: GameDownloaderService,
+              private gameDatabaseService: GameDatabaseService,
               private initService: InitService) {
   }
 
@@ -34,5 +36,9 @@ export class GameSearchComponent implements OnInit {
       this.games = result.results;
       return this.games;
     });
+  }
+
+  addGame(game: Game) {
+    this.gameDatabaseService.saveGame(game);
   }
 }
