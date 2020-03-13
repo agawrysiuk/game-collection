@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {Observable} from "rxjs";
-import {Game} from "../../dto/game";
-import {GameDatabaseService} from "../../service/game-database.service";
+import {Observable} from 'rxjs';
+import {Game} from '../../dto/game';
+import {InitService} from '../../service/init.service';
 
 @Component({
   selector: 'app-games-list',
@@ -12,8 +12,8 @@ export class GamesListComponent implements OnInit {
   searchText: string;
   $games: Observable<Game[]>;
 
-  constructor(private databaseService: GameDatabaseService) {
-    this.$games = databaseService.getAllGames();
+  constructor(private initService: InitService) {
+    this.$games = initService.$games;
     console.log(this.$games);
   }
 
