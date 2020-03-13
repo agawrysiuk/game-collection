@@ -11,12 +11,15 @@
       <thead>
       <tr>
         <th>Title</th>
+        <th>Image</th>
         <th>Released</th>
       </tr>
       </thead>
       <tbody>
-      <tr *ngFor="let game of games | filter:searchText">
+      <tr *ngFor="let game of $games | async | filter:searchText">
         <td>{{game.name}}</td>
+        <td><img class="search-game-image" src="{{game.background_image}}" alt="" [ngbTooltip]="tooltipImage" tooltipClass="image-tooltip-class"></td>
+        <ng-template #tooltipImage><img class="search-game-image-big" src="{{game.background_image}}" alt=""></ng-template>
         <td>{{game.released}}</td>
       </tr>
       </tbody>

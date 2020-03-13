@@ -6,9 +6,12 @@ import io.github.agawrysiuk.gamecollectionbackend.service.GameServiceWrite;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import java.util.List;
 
 @Controller
 @RequiredArgsConstructor
@@ -17,7 +20,11 @@ public class GameController {
     private final GameServiceRead serviceRead;
 
     @PostMapping("/save")
-    public ResponseEntity<String> saveBook(@RequestBody Game game) {
+    public ResponseEntity<String> saveGame(@RequestBody Game game) {
         return serviceWrite.saveGame(game);
     }
+
+    @GetMapping("/games")
+    @ResponseBody
+    public List<Game> getGames() {return serviceRead.getAllGames();}
 }

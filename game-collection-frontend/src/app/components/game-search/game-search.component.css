@@ -26,33 +26,6 @@
   width: 80px;
 }
 
-.search-button {
-  cursor: pointer;
-  height: 38px;
-  padding-left: 10px;
-  padding-right: 10px;
-  background: #1c8adb;
-  border-radius: 100px;
-  border: none;
-  color: #fff;
-  text-decoration: none;
-}
-
-.search-button:hover {
-  background: #5F9BE0;
-}
-
-.search-button:active {
-  background: #17548e;
-}
-
-.search-button:disabled {
-  cursor: default;
-  background: none;
-  border: 1px solid #cccccc;
-  color: #cccccc;
-}
-
 .search-game-list {
   order: 3;
   padding: 0 8px 0 8px;
@@ -67,29 +40,4 @@
   appearance: none;
   padding-left: 8px;
   background: url(/assets/images/dropdown.png) no-repeat 90%;
-}
-
-.search-game-image {
-  width: auto;
-  height: 24px;
-  position: relative;
-}
-
-.search-game-image-big {
-  width: 600px;
-  height: auto;
-  border: 2px solid #17548e;
-}
-
-.image-tooltip-class {
-  opacity: 1 !important;
-  pointer-events: none;
-}
-
-.image-tooltip-class .tooltip-inner {
-  background-color: transparent;
-}
-
-.image-tooltip-class .arrow::before {
-  display: none;
 }

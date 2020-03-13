@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {Observable} from "rxjs";
+import {Game} from "../../dto/game";
+import {GameDatabaseService} from "../../service/game-database.service";
 
 @Component({
   selector: 'app-games-list',
@@ -7,15 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GamesListComponent implements OnInit {
   searchText: string;
-  games = [
-    { name: 'Stronghold', released: '2002' },
-    { name: 'Alien: Isolation', released: '2014' },
-    { name: 'Borderlands', released: '2009' },
-    { name: 'The Witcher 3: Wild Hunt', released: '2015' },
-    { name: 'Fallout', released: '1997' },
-  ];
+  $games: Observable<Game[]>;
 
-  constructor() { }
+  constructor(private databaseService: GameDatabaseService) {
+    this.$games = databaseService.getAllGames();
+    console.log(this.$games);
+  }
 
   ngOnInit(): void {
   }
