@@ -11,6 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 import {HttpClientModule} from '@angular/common/http';
 import {InitService} from "./service/init.service";
 import {NgbTooltipModule} from "@ng-bootstrap/ng-bootstrap";
+import { PickRandomGameComponent } from './components/pick-random-game/pick-random-game.component';
 
 export function initData(initService: InitService) {
   return () => initService.init();
@@ -20,7 +21,8 @@ export function initData(initService: InitService) {
   declarations: [
     AppComponent,
     GameSearchComponent,
-    GamesListComponent
+    GamesListComponent,
+    PickRandomGameComponent
   ],
   imports: [
     BrowserModule,
