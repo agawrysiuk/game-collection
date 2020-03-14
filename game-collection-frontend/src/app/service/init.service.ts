@@ -3,6 +3,7 @@ import {GamePlatformsService} from "./game-platforms.service";
 import {GameDatabaseService} from "./game-database.service";
 import {Observable} from "rxjs";
 import {Game} from "../model/game";
+import {GameDetails} from "../model/game-details";
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +12,7 @@ export class InitService {
 
   public selectOptions = [];
   public platformMap = new Map();
-  public $games: Observable<Game[]>;
+  public $games: Observable<GameDetails[]>;
 
   constructor(private platformsService: GamePlatformsService,
               private databaseService: GameDatabaseService) { }

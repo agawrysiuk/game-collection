@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Observable} from 'rxjs';
-import {Game} from '../../model/game';
 import {InitService} from '../../service/init.service';
+import {GameDetails} from "../../model/game-details";
 
 @Component({
   selector: 'app-games-list',
@@ -10,7 +10,7 @@ import {InitService} from '../../service/init.service';
 })
 export class GamesListComponent implements OnInit {
   searchText: string;
-  $games: Observable<Game[]>;
+  $games: Observable<GameDetails[]>;
 
   constructor(private initService: InitService) {
     this.$games = initService.$games;

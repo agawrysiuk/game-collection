@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {Game} from "../model/game";
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {Observable} from "rxjs";
+import {GameDetails} from "../model/game-details";
 
 @Injectable({
   providedIn: 'root'
@@ -25,7 +26,7 @@ export class GameDatabaseService {
     this.http.post<Game>(this.saveGameUrl, game,  httpOptions).subscribe(data => console.log(data));
   }
 
-  getAllGames(): Observable<Game[]> {
-    return this.http.get<Game[]>(this.getAllGamesUrl);
+  getAllGames(): Observable<GameDetails[]> {
+    return this.http.get<GameDetails[]>(this.getAllGamesUrl);
   }
 }

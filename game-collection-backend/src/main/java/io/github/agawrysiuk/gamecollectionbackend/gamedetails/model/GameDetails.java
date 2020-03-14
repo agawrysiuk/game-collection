@@ -29,4 +29,7 @@ public class GameDetails {
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     @JoinColumn(name = "tag_id")
     private Set<Tag> tags;
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    @JoinColumn(name = "screenshot_id")
+    private Set<ScreenShot> screenShots;
 }
