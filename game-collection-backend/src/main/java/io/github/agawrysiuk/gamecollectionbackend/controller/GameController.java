@@ -1,8 +1,9 @@
 package io.github.agawrysiuk.gamecollectionbackend.controller;
 
 import io.github.agawrysiuk.gamecollectionbackend.game.model.Game;
-import io.github.agawrysiuk.gamecollectionbackend.game.service.GameServiceRead;
-import io.github.agawrysiuk.gamecollectionbackend.game.service.GameServiceWrite;
+import io.github.agawrysiuk.gamecollectionbackend.gamedetails.model.GameDetails;
+import io.github.agawrysiuk.gamecollectionbackend.gamedetails.service.GameDetailsReadService;
+import io.github.agawrysiuk.gamecollectionbackend.gamedetails.service.GameDetailsWriteService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -16,8 +17,8 @@ import java.util.List;
 @Controller
 @RequiredArgsConstructor
 public class GameController {
-    private final GameServiceWrite serviceWrite;
-    private final GameServiceRead serviceRead;
+    private final GameDetailsWriteService serviceWrite;
+    private final GameDetailsReadService serviceRead;
 
     @PostMapping("/save")
     public ResponseEntity<String> saveGame(@RequestBody Game game) {
@@ -26,5 +27,5 @@ public class GameController {
 
     @GetMapping("/games")
     @ResponseBody
-    public List<Game> getGames() {return serviceRead.getAllGames();}
+    public List<GameDetails> getGames() {return serviceRead.getAllGames();}
 }

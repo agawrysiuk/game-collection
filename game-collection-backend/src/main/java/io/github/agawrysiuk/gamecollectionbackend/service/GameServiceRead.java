@@ -1,4 +1,4 @@
-package io.github.agawrysiuk.gamecollectionbackend.game.service;
+package io.github.agawrysiuk.gamecollectionbackend.service;
 
 import io.github.agawrysiuk.gamecollectionbackend.game.model.Game;
 import io.github.agawrysiuk.gamecollectionbackend.game.respository.GameRepository;
