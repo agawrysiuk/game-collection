@@ -1,6 +1,7 @@
 package io.github.agawrysiuk.gamecollectionbackend.service;
 
 import io.github.agawrysiuk.gamecollectionbackend.dto.Game;
+import io.github.agawrysiuk.gamecollectionbackend.dto.ScreenShot;
 import io.github.agawrysiuk.gamecollectionbackend.respository.GameRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -19,7 +20,7 @@ public class GameServiceWrite {
     public ResponseEntity<String> saveGame(Game game) {
         Optional<Game> optionalGame = gameRepository.findById(game.getSlug());
         if (optionalGame.isEmpty()) {
-            game.getShort_screenshots().remove(game.getShort_screenshots().iterator().next());
+            removeTheMinusOneIdScreenshot(game);
             gameRepository.save(game);
             log.info("Game {} saved",game.getName());
             return new ResponseEntity<>("Game saved", HttpStatus.OK);
@@ -29,6 +30,11 @@ public class GameServiceWrite {
     }
 
     private void removeTheMinusOneIdScreenshot(Game game) {
-
+        for (ScreenShot screenShot : game.getShort_screenshots()) {
+            if (screenShot.getId().equals(-1L)) {
+                game.getShort_screenshots().remove(screenShot);
+                return;
+            }
+        }
     }
 }
