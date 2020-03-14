@@ -1,9 +1,8 @@
 package io.github.agawrysiuk.gamecollectionbackend.game.service;
 
-import io.github.agawrysiuk.gamecollectionbackend.gamedetails.service.GameDetailsDownloaderService;
 import io.github.agawrysiuk.gamecollectionbackend.game.model.Game;
-import io.github.agawrysiuk.gamecollectionbackend.gamedetails.model.ScreenShot;
 import io.github.agawrysiuk.gamecollectionbackend.game.respository.GameRepository;
+import io.github.agawrysiuk.gamecollectionbackend.gamedetails.service.GameDetailsDownloaderService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -22,21 +21,11 @@ public class GameServiceWrite {
     public ResponseEntity<String> saveGame(Game game) {
         Optional<Game> optionalGame = gameRepository.findById(game.getSlug());
         if (optionalGame.isEmpty()) {
-            removeTheMinusOneIdScreenshot(game);
             gameRepository.save(game);
             log.info("Game {} saved",game.getName());
             return new ResponseEntity<>("Game saved", HttpStatus.OK);
         }
         log.info("Game {} exists",game.getName());
         return new ResponseEntity<>("Game exists", HttpStatus.CONFLICT);
-    }
-
-    private void removeTheMinusOneIdScreenshot(Game game) {
-        for (ScreenShot screenShot : game.getShort_screenshots()) {
-            if (screenShot.getId().equals(-1L)) {
-                game.getShort_screenshots().remove(screenShot);
-                return;
-            }
-        }
     }
 }
