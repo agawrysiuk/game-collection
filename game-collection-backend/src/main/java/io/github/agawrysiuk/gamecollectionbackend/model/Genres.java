@@ -1,4 +1,4 @@
-package io.github.agawrysiuk.gamecollectionbackend.dto;
+package io.github.agawrysiuk.gamecollectionbackend.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

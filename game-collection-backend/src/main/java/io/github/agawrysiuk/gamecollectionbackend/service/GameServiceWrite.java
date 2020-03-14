@@ -1,7 +1,7 @@
 package io.github.agawrysiuk.gamecollectionbackend.service;
 
-import io.github.agawrysiuk.gamecollectionbackend.dto.Game;
-import io.github.agawrysiuk.gamecollectionbackend.dto.ScreenShot;
+import io.github.agawrysiuk.gamecollectionbackend.model.Game;
+import io.github.agawrysiuk.gamecollectionbackend.model.ScreenShot;
 import io.github.agawrysiuk.gamecollectionbackend.respository.GameRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -15,6 +15,7 @@ import java.util.Optional;
 @RequiredArgsConstructor
 @Slf4j
 public class GameServiceWrite {
+    private final GameDetailsDownloaderService detailsService;
     private final GameRepository gameRepository;
 
     public ResponseEntity<String> saveGame(Game game) {

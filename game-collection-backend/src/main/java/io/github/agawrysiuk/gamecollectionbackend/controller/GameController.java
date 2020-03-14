@@ -1,6 +1,6 @@
 package io.github.agawrysiuk.gamecollectionbackend.controller;
 
-import io.github.agawrysiuk.gamecollectionbackend.dto.Game;
+import io.github.agawrysiuk.gamecollectionbackend.model.Game;
 import io.github.agawrysiuk.gamecollectionbackend.service.GameServiceRead;
 import io.github.agawrysiuk.gamecollectionbackend.service.GameServiceWrite;
 import lombok.RequiredArgsConstructor;
