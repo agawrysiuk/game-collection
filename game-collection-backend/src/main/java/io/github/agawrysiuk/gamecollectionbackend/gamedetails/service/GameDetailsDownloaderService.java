@@ -1,9 +1,9 @@
-package io.github.agawrysiuk.gamecollectionbackend.service;
+package io.github.agawrysiuk.gamecollectionbackend.gamedetails.service;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import io.github.agawrysiuk.gamecollectionbackend.model.GameDetails;
-import io.github.agawrysiuk.gamecollectionbackend.utils.GameNameFormatter;
+import io.github.agawrysiuk.gamecollectionbackend.gamedetails.model.GameDetails;
+import io.github.agawrysiuk.gamecollectionbackend.gamedetails.utils.GameNameFormatter;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
@@ -21,4 +21,5 @@ public class GameDetailsDownloaderService {
                 DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
         return objectMapper.readValue(rawgUrl, GameDetails.class);
     }
+
 }

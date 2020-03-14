@@ -1,7 +1,7 @@
-package io.github.agawrysiuk.gamecollectionbackend.service;
+package io.github.agawrysiuk.gamecollectionbackend.game.service;
 
-import io.github.agawrysiuk.gamecollectionbackend.model.Game;
-import io.github.agawrysiuk.gamecollectionbackend.model.ScreenShot;
+import io.github.agawrysiuk.gamecollectionbackend.game.model.Game;
+import io.github.agawrysiuk.gamecollectionbackend.gamedetails.model.ScreenShot;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

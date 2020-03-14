@@ -1,6 +1,7 @@
-package io.github.agawrysiuk.gamecollectionbackend.service;
+package io.github.agawrysiuk.gamecollectionbackend.game.service;
 
-import io.github.agawrysiuk.gamecollectionbackend.model.GameDetails;
+import io.github.agawrysiuk.gamecollectionbackend.gamedetails.service.GameDetailsDownloaderService;
+import io.github.agawrysiuk.gamecollectionbackend.gamedetails.model.GameDetails;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

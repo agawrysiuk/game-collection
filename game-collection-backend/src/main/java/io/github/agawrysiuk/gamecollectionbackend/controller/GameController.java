@@ -1,8 +1,8 @@
 package io.github.agawrysiuk.gamecollectionbackend.controller;
 
-import io.github.agawrysiuk.gamecollectionbackend.model.Game;
-import io.github.agawrysiuk.gamecollectionbackend.service.GameServiceRead;
-import io.github.agawrysiuk.gamecollectionbackend.service.GameServiceWrite;
+import io.github.agawrysiuk.gamecollectionbackend.game.model.Game;
+import io.github.agawrysiuk.gamecollectionbackend.game.service.GameServiceRead;
+import io.github.agawrysiuk.gamecollectionbackend.game.service.GameServiceWrite;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;

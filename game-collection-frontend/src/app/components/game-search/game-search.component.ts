@@ -1,5 +1,5 @@
 import {Component, OnInit, ViewEncapsulation} from '@angular/core';
-import {Game, GameCollection} from "../../dto/game";
+import {Game, GameCollection} from "../../model/game";
 import {GameDownloaderService} from "../../service/game-downloader.service";
 import {FormControl, Validators} from "@angular/forms";
 import {InitService} from "../../service/init.service";

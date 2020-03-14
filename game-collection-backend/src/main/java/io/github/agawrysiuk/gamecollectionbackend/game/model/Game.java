@@ -1,5 +1,7 @@
-package io.github.agawrysiuk.gamecollectionbackend.model;
+package io.github.agawrysiuk.gamecollectionbackend.game.model;
 
+import io.github.agawrysiuk.gamecollectionbackend.gamedetails.model.Genre;
+import io.github.agawrysiuk.gamecollectionbackend.gamedetails.model.ScreenShot;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -23,6 +25,6 @@ public class Game {
     @JoinColumn(name = "screenshot_id")
     private Set<ScreenShot> short_screenshots;
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-    @JoinColumn(name = "genres_id")
-    private Set<Genres> genres;
+    @JoinColumn(name = "genre_id")
+    private Set<Genre> genres;
 }

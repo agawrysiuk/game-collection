@@ -1,8 +1,9 @@
-package io.github.agawrysiuk.gamecollectionbackend.service;
+package io.github.agawrysiuk.gamecollectionbackend.game.service;
 
-import io.github.agawrysiuk.gamecollectionbackend.model.Game;
-import io.github.agawrysiuk.gamecollectionbackend.model.ScreenShot;
-import io.github.agawrysiuk.gamecollectionbackend.respository.GameRepository;
+import io.github.agawrysiuk.gamecollectionbackend.gamedetails.service.GameDetailsDownloaderService;
+import io.github.agawrysiuk.gamecollectionbackend.game.model.Game;
+import io.github.agawrysiuk.gamecollectionbackend.gamedetails.model.ScreenShot;
+import io.github.agawrysiuk.gamecollectionbackend.game.respository.GameRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;

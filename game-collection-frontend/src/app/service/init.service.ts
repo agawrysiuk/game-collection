@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import {GamePlatformsService} from "./game-platforms.service";
 import {GameDatabaseService} from "./game-database.service";
 import {Observable} from "rxjs";
-import {Game} from "../dto/game";
+import {Game} from "../model/game";
 
 @Injectable({
   providedIn: 'root'

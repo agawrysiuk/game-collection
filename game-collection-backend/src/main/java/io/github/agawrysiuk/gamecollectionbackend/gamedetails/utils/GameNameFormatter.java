@@ -1,4 +1,4 @@
-package io.github.agawrysiuk.gamecollectionbackend.utils;
+package io.github.agawrysiuk.gamecollectionbackend.gamedetails.utils;
 
 public class GameNameFormatter {
 
