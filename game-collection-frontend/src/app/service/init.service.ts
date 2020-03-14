@@ -18,7 +18,6 @@ export class InitService {
 
   init() {
     this.platformsService.getAllPlatforms().subscribe(result => {
-      console.log(result.results);
       result.results.forEach(platform => {
         this.platformMap.set(platform.name, platform.id);
         this.selectOptions.push(platform.name);

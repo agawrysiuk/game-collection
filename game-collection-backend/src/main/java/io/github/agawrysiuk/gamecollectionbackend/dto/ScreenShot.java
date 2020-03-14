@@ -17,8 +17,4 @@ public class ScreenShot {
     @Id
     private Long id;
     private String image;
-    @JsonIgnore
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "game_slug")
-    private Game game;
 }

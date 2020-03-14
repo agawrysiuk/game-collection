@@ -11,6 +11,6 @@ import java.util.List;
 public interface GameRepository extends JpaRepository<Game,String> {
 
     @Override
-    @Query("SELECT m FROM Game m LEFT JOIN FETCH m.short_screenshots s LEFT JOIN FETCH m.genres g")
+    @Query("SELECT DISTINCT m FROM Game m LEFT JOIN FETCH m.short_screenshots s LEFT JOIN FETCH m.genres g")
     List<Game> findAll();
 }

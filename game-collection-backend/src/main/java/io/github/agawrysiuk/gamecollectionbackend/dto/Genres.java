@@ -17,8 +17,4 @@ public class Genres {
     @Id
     private Long id;
     private String name;
-    @JsonIgnore
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "game_slug")
-    private Game game;
 }

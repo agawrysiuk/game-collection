@@ -22,7 +22,6 @@ export class GameDatabaseService {
         'Content-Type':  'application/json'
       })
     };
-    console.log(game);
     this.http.post<Game>(this.saveGameUrl, game,  httpOptions).subscribe(data => console.log(data));
   }
 

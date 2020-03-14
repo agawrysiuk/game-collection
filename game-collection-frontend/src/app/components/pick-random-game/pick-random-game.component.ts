@@ -10,7 +10,7 @@ import {Game} from "../../dto/game";
 export class PickRandomGameComponent implements OnInit {
 
   games: Game[] = [];
-  pickedGame: Game;
+  pickedGame: Game = new Game();
 
   constructor(private initService: InitService) {
     this.initService.$games.subscribe(result => {
