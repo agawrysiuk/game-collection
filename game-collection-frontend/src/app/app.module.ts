@@ -12,6 +12,8 @@ import {HttpClientModule} from '@angular/common/http';
 import {InitService} from "./service/init.service";
 import {NgbTooltipModule} from "@ng-bootstrap/ng-bootstrap";
 import { PickRandomGameComponent } from './components/pick-random-game/pick-random-game.component';
+import { ButtonTileComponent } from './shared/components/button-tile/button-tile.component';
+import {SHARED_DECLARATIONS} from "./shared/app.shared-declarations";
 
 export function initData(initService: InitService) {
   return () => initService.init();
@@ -22,7 +24,8 @@ export function initData(initService: InitService) {
     AppComponent,
     GameSearchComponent,
     GamesListComponent,
-    PickRandomGameComponent
+    PickRandomGameComponent,
+    SHARED_DECLARATIONS
   ],
   imports: [
     BrowserModule,

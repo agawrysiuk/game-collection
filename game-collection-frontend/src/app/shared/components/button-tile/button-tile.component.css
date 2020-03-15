@@ -1,0 +1,78 @@
+.button-tile {
+  position: relative;
+  display: block;
+  background: #f4f4f4;
+  width: 200px;
+  height: 250px;
+  border-radius: 12px;
+  border: 1px solid #000;
+  text-align: center;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+  top: 0;
+  transition: all 0.5s;
+  margin-bottom: 0px;
+}
+
+.button-tile:hover {
+  background: #f0f0f0;
+  box-shadow: 0 20px 10px rgba(0, 0, 0, 0.3);
+  top: -10px;
+}
+
+.tile-group {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.tile-title {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 150px;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 36px;
+  margin-top: 4px;
+}
+
+.tile-image-container {
+  display : flex;
+  align-items : center;
+  justify-content: center;
+  width: 150px;
+  height: 150px;
+}
+
+.tile-image {
+  max-width: 150px;
+  max-height: 150px;
+  width: auto;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+.tile-button {
+  display: block;
+  width: 100%;
+  background-color: none;
+  border-radius: 8px;
+  border: 1px solid #17548E;
+  color: #17548E;
+  margin-top: 8px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.tile-button:hover {
+  background: #17548E;
+  border: 1 px solid transparent;
+  color: #ffffff;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+.tile-button:active {
+  background: #2E608E;
+}
