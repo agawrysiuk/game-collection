@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {InitService} from "../../service/init.service";
 import {Game} from "../../model/game";
+import {GameDetails} from "../../model/game-details";
 
 @Component({
   selector: 'app-pick-random-game',
@@ -9,8 +10,8 @@ import {Game} from "../../model/game";
 })
 export class PickRandomGameComponent implements OnInit {
 
-  games: Game[] = [];
-  pickedGame: Game = new Game();
+  games: GameDetails[] = [];
+  pickedGame: GameDetails = new GameDetails();
 
   constructor(private initService: InitService) {
     this.initService.$games.subscribe(result => {

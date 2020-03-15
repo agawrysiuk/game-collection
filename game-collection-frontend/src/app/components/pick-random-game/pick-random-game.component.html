@@ -5,4 +5,5 @@
   <h1 class="h1 text-center">{{pickedGame.name}}</h1>
   <img src="{{pickedGame.background_image}}" class="image-random text-center" alt=""/>
   <p class="text-center"><strong>Released: </strong>{{pickedGame.released}}</p>
+  <p class="text-center"><strong>Description: </strong><span [innerHTML]="pickedGame.description"></span> </p>
 </div>

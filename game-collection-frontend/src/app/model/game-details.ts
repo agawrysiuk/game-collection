@@ -10,6 +10,7 @@ export class GameDetails {
   platforms: Platform[];
   genres: Genre[];
   tags: Tag[];
+  screenshots: ScreenShot[];
 }
 
 export class ScreenShot {
