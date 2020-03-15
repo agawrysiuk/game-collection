@@ -8,6 +8,6 @@ import java.util.List;
 
 public interface GameDetailsRepository extends JpaRepository<GameDetails, String> {
     @Override
-    @Query("SELECT DISTINCT g FROM GameDetails g LEFT JOIN FETCH g.platforms p LEFT JOIN FETCH g.genres n LEFT JOIN FETCH g.tags t")
+    @Query("SELECT DISTINCT g FROM GameDetails g LEFT JOIN FETCH g.platforms p LEFT JOIN FETCH g.genres n LEFT JOIN FETCH g.tags t LEFT JOIN FETCH g.screenShots s")
     List<GameDetails> findAll();
 }
