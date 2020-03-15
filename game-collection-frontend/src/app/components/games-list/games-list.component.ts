@@ -20,4 +20,8 @@ export class GamesListComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  getDetails(event) {
+    const gameDetails: GameDetails = event;
+    alert('Someone clicked game ' + gameDetails.name);
+  }
 }

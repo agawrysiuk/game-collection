@@ -7,27 +7,10 @@
       <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off"
              placeholder="Pick up a game from your collection">
     </div>
-<!--    <table class="table table-striped">-->
-<!--      <thead>-->
-<!--      <tr>-->
-<!--        <th>Title</th>-->
-<!--        <th>Image</th>-->
-<!--        <th>Released</th>-->
-<!--      </tr>-->
-<!--      </thead>-->
-<!--      <tbody>-->
-<!--      <tr *ngFor="let game of $games | async | filter:searchText">-->
-<!--        <td>{{game.name}}</td>-->
-<!--        <td><img class="search-game-image" src="{{game.background_image}}" alt="" [ngbTooltip]="tooltipImage" tooltipClass="image-tooltip-class"></td>-->
-<!--        <ng-template #tooltipImage><img class="search-game-image-big" src="{{game.background_image}}" alt=""></ng-template>-->
-<!--        <td>{{game.released}}</td>-->
-<!--      </tr>-->
-<!--      </tbody>-->
-<!--    </table>-->
   </div>
   <div class="row">
-    <div class="search-game" *ngFor="let game of $games | async">
-      <button-tile [image]="game.background_image" [title]="game.name"></button-tile>
+    <div class="search-game" *ngFor="let game of $games | async | filter: searchText">
+      <button-tile [image]="game.background_image" [title]="game.name" [gameDetails]="game" (buttonClicked)="getDetails($event)"></button-tile>
     </div>
   </div>
 </div>
