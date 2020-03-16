@@ -1,5 +1,7 @@
 # game-collection
 
+![Google Maps Pokemon](https://raw.githubusercontent.com/agawrysiuk/game-collection/master/screenshot.jpg)
+
 Your game repository. Technologies/libraries/frameworks used:
 
 - Spring Boot
